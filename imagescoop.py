@@ -1,5 +1,6 @@
 # encoding: utf-8
 # Copyright (c) 2016 Kenneth Blomqvist
+# modified by Alban PRATS
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 #
@@ -10,10 +11,17 @@
 ############################
 ## How to use
 ############################
-# To scrape images run e.g. python scrape.py <csv file> --count 200 --label <label>
-# The images will be saved in a subfolder called "images" and it will contain another folder called whatever
+# To scrape images run e.g. python image-search.py <csv file> --count 200 --label <label>
+# The images will be saved in  ./images/label/ItemCategory/itemId
 # you passed in as the label parameter. This enables you to easily scrape a bunch of different searches while still
 # keeping the images organized. The image files will be saved as jpeg images and named by the image contents sha1 hash.
+#############################
+## Note for the csv
+#############################
+# Separator : ";"
+# 1 row : item id
+# 2 row : item name
+# 3 row : item category
 
 import os
 import re
